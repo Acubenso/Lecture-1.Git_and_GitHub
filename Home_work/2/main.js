@@ -35,10 +35,7 @@
             elRight++;
             elementOfNewArray++;
         }
-        if(arr[elementOfNewArray] ==== (arr.[elementOfNewArray-1] + 1)){   
-                console.log(arr);
-            }
-        else console.log(-1);    
+        
     }   
     return arr;
  }
