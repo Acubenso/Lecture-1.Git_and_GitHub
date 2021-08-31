@@ -1,0 +1,29 @@
+h1 {
+	text-align: center;
+}
+
+.wrapper {
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: green;
+}
+
+#inputArr {
+	margin-left: 10px;
+	border: 1px solid black;
+	border-radius: 2px;
+}
+
+.resultArr {
+	margin-left: 10px;
+	margin-top: 5px;
+	color: #34ebb4;
+}
+
+#buttonArr {
+	border-radius: 3px;
+	background-color: #34eb3a;
+	cursor: pointer;
+}

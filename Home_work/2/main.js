@@ -1,28 +1,36 @@
-function arrayChallenge(arr){
+    const input = document.querySelector("#inputArr");
+    const button = document.querySelector("#buttonArr");
+    const resultEl = document.querySelector(".resultArr");
 
-    let leftSum = 0;
-    for(let i = 0; i < arr.length/2; i++){
-        leftSum += arr[i];
-    }
+            
+    button.addEventListener("click", () => {
+        let arr = input.value.split("").map((el) => (el = parseInt(el)));
 
-    let rightSum = 0;
-    for(let j = arr.length/2; j < arr.length; j++){
-        rightSum += arr[j];
-    }
+        resultEl.innerHTML = "Result is " + arrayChallenge(arr);
+    }); 
 
-    if(leftSum === rightSum){
-        console.log(arr)
-    }else {
-        console.log(-1);
-    }
-} 
+    function arrayChallenge(arr){
+        let result;
+        let leftSum = 0;
+        for(let i = 0; i < arr.length/2; i++){
+            leftSum += arr[i];
+        }
 
-arrayChallenge([4, 2, 6, 2, 6, 4]); // Result = [4, 2, 6, 2, 6, 4] 
-arrayChallenge([4, 2, 6, 21, 61, 41]); // Result = -1 
+        let rightSum = 0;
+        for(let j = arr.length/2; j < arr.length; j++){
+            rightSum += arr[j];
+        }
 
+        if(leftSum === rightSum){
+            result = arr;
+        }else {
+            result = -1;
+        }
+    return result;    
+    } 
 
 ///////////////////////////////////////////////////////////////////////////
- function MergeSort(arr){
+/* function MergeSort(arr){
     if(arr.length > 1){
         let middlePoint = Math.floor(arr.length/2);
         let leftHalf = arr.slice(0, middlePoint);
@@ -62,5 +70,4 @@ arrayChallenge([4, 2, 6, 21, 61, 41]); // Result = -1
     }   
     return arr;
  }
-
-
+*/
